@@ -6,9 +6,9 @@
 <table>
     <tr>
         <td align="center" width="130px">
-        <a href="https://github.com/JAEYEONsss"><img height="100px" src=""></a>
+        <a href="https://github.com/Leek-ki"><img height="100px" src="https://avatars.githubusercontent.com/u/104998537?v=4"></a>
         <br/>
-        <a href="https://github.com/JAEYEONsss">이기현</a>
+        <a href="https://github.com/Leek-ki">이기현</a>
         </td>
         <td align="center" width="130px">
         <a href="https://github.com/dlwlehd"><img height="100px" src="https://user-images.githubusercontent.com/86334435/211778092-a3ef8455-0840-483e-beaf-11c88a5946f1.png"></a>
