@@ -80,15 +80,58 @@ for i in range(1, M + 1):
 ### Hash Table 개념 정리
 
 - `HashTable(해시 테이블)`은 `Key` 와 `Value` 의 쌍으로 데이터를 저장하는 자료구조 입니다.
-언어에 따라서 `HashMap`이라고도 불리며, 파이썬의 `Dictionary` 또한 `HashTable`로 구현되어 있습니다.
+  언어에 따라서 `HashMap`이라고도 불리며, 파이썬의 `Dictionary` 또한 `HashTable`로 구현되어 있습니다.
 
 
 - `HashTable`(`HashMap`, `Dictionary`) 의 특징은 다음과 같습니다.
 
-  - 순차적으로 데이터를 저장하지 않습니다.
-  - `Key`를 통해서 `Value`값을 얻습니다.
-  - `Value`값은 중복 가능 하지만 `Key`는 중복될 수 없습니다.
-  - 수정 가능합니다.(mutable)
+    - 순차적으로 데이터를 저장하지 않습니다.
+    - `Key`를 통해서 `Value`값을 얻습니다.
+    - `Value`값은 중복 가능 하지만 `Key`는 중복될 수 없습니다.
+    - 수정 가능합니다.(mutable)
 
 특히 파이썬에서는 `Dictionary`가 `List` 보다 훨씬 빠르게 동작하기 떄문에 데이터를 조회할 때 `Dictionary`를 사용하는 것이 좋습니다.
 시간초과가 난다면 `Dictionary`를 사용할 수 있는지 확인해보는 것도 좋을 것 같습니다.
+
+## 1697 숨바꼭질
+
++ BFS를 이용한 풀이
+    + BFS를 이용하여 풀이하였음.
+    + `cur` 이라는 변수에 현재 위치를 저장하고, `cnt` 라는 변수에 현재 위치까지 오는데 걸린 시간을 저장함.
+    + `cur` 이라는 변수가 `end` 변수와 같아지면 `cnt` 를 반환함.
+
+아래와 같은 코드를 작성하였지만 시간초과, 메모리 초과로 인한 채점이 불가능했다.
+
+
+``` python
+from collections import deque
+
+cur, end = map(int, input().split())
+
+
+def bfs(cur, end):
+    queue = deque()
+    queue.append([cur, 0])
+
+    while queue:
+        cur, cnt = queue.popleft()
+
+        if cur == end:
+            return cnt
+        else:
+            if cur*2 <= 100000: 
+                queue.append([cur * 2, cnt + 1])
+            if cur+1 <= 100000 and cur+1 <= end:
+                queue.append([cur + 1, cnt + 1])
+            if cur-1 >= 0:
+                queue.append([cur - 1, cnt + 1])
+
+    # 못 찾았을 경우
+    return -1
+
+
+print(bfs(cur, end))
+```
+
+이유는 다음시간에 알아보도록 하자, 지금 생각하기로는 큐에 너무 많은 데이터가 쌓이고 있어서 그런것 같다. ` append` 를 할 때마다 `queue` 에 데이터가 쌓이고 있기 때문이다.
+`append` 하기 전 조건을 좀 다시 한번 살펴 봐야겠다.
