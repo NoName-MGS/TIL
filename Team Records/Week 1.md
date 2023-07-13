@@ -3,8 +3,8 @@
 ## 활동 사진
 
 ### 시작 시간 : 20:30 / 종료 시간 : 23 : 30
-<img src="record1.png">
-<img src="record2.png">
+<img src="Week1_record1.png">
+<img src="Week1_record2.png">
 
 ## 소감
 
