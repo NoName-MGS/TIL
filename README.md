@@ -20,7 +20,6 @@
         <br/>
         <a href="https://github.com/hayoooon">진하윤</a>
         </td>
-        <td align="center" width="130px">
     <tr height="50px">
         <td align="center">
             <a href="https://github.com/Leek-ki/beakjoon">개인 깃허브 TIL</a>
