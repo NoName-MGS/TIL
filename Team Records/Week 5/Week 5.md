@@ -22,6 +22,6 @@
 
 + 진하윤
 
-활동 내용 :
+활동 내용 : moca-process모듈 학습(김상훈 교수님)
 
-소감 :
+소감 : 운영체제의 프로세스 메커니즘과 signal에 대해 이해할 수 있었다. Shared memory와 Message passing 방식의 차이를 알고 장단점을 공부했다.
